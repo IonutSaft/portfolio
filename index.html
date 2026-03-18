@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="ring"></div>
+
+    <!-- NAV -->
+    <nav>
+      <a class="nav-logo" href="#hero">Ionut<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-bg-circle hbc1"></div>
+      <div class="hero-bg-circle hbc2"></div>
+
+      <div class="hero-left">
+        <p class="hero-eyebrow">&#x2F;&#x2F; Available for hire</p>
+        <h1 class="hero-name">Hello, I'm<br /><em>Ionuț.</em></h1>
+        <p class="hero-title">Aspiring Full-Stack Developer</p>
+        <p class="hero-desc">
+          I build thoughtful, performant web experiences — from pixel-perfect
+          UIs to robust server-side systems. Growing developer with a passion
+          for clean code and modern tech stacks.
+        </p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn-primary">View My Work →</a>
+          <a href="#contact" class="btn-ghost">Get In Touch</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-visual">
+          <div class="hero-visual-ring">
+            <div class="tech-dot td1">React</div>
+            <div class="tech-dot td3">Node.js</div>
+          </div>
+          <div class="hero-visual-ring2">
+            <div class="tech-dot td2">Next.js</div>
+            <div class="tech-dot td4">TypeScript</div>
+          </div>
+          <div class="hero-visual-center">
+            <strong>Full-Stack</strong>
+            <span>Developer</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-inner">
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p class="section-label">// 01 — about me</p>
+            <h2 class="section-title">Who you'd be <em>working with</em></h2>
+            <div class="divider"></div>
+            <p>
+              As a graduate in Informatics, I have a strong foundation in modern
+              web technologies. I enjoy tackling problems end-to-end — designing
+              and building performant, user-friendly and scalable applications.
+              I do my best to write clean, efficient code and continuously learn
+              new tools and best practices in the industry.
+            </p>
+            <p>
+              I am a curious individual who likes to try new things and learn by
+              doing. I respect everyone I interact with, I get along with them
+              quickly and I am always open to feedback and collaboration. I am
+              looking for a role where I can contribute, grow, and be part of a
+              supportive team.
+            </p>
+          </div>
+
+          <div class="about-stats reveal">
+            <div class="stat-card">
+              <div class="stat-num">5+</div>
+              <div class="stat-label">Technologies mastered</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">2+</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">1</div>
+              <div class="stat-label">CS Degree earned</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">∞</div>
+              <div class="stat-label">Curiosity to learn</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-inner">
+        <p class="section-label reveal">// 02 — skills & tools</p>
+        <h2 class="section-title reveal">My technical<br /><em>toolkit</em></h2>
+        <div class="divider reveal"></div>
+
+        <div class="skills-grid">
+          <div class="skill-category reveal">
+            <p class="skill-cat-label">Frontend</p>
+            <div class="skill-tags">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Next.js</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal">
+            <p class="skill-cat-label">Backend</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">REST APIs</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">Prisma ORM</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal">
+            <p class="skill-cat-label">Dev Tools</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">npm</span>
+              <span class="skill-tag">Vercel</span>
+              <span class="skill-tag">Vitest</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-inner">
+        <p class="section-label reveal">// 03 — selected work</p>
+        <h2 class="section-title reveal">What I've<br /><em>built</em></h2>
+        <div class="divider reveal"></div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card reveal">
+            <div class="project-thumb">
+              <div class="project-thumb-bg pt1">🛒</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-name">
+                E-Commerce Platform - Work In Progress
+              </h3>
+              <p class="project-desc">
+                A full-featured online store with product listings, cart
+                management, user authentication, and a secure checkout flow.
+                Built with performance and scalability in mind.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">Next.js</span>
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">TypeScript</span>
+                <span class="stack-pill">Tailwind CSS</span>
+                <span class="stack-pill">Prisma ORM</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/IonutSaft/ecommerce"
+                  class="proj-link"
+                  target="_blank"
+                >
+                  GitHub →
+                </a>
+                <a
+                  href="https://ecommerce-ivory-nine-53.vercel.app/"
+                  class="proj-link proj-link-ghost"
+                  target="_blank"
+                >
+                  Live Demo →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card reveal">
+            <div class="project-thumb">
+              <div class="project-thumb-bg pt2">📋</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-name">Job Application Tracker</h3>
+              <p class="project-desc">
+                A web app to help job seekers organize and track their
+                applications. Features include company profiles, status updates,
+                and analytics on application progress.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">Next.js</span>
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">TypeScript</span>
+                <span class="stack-pill">Prisma ORM</span>
+                <span class="stack-pill">PostgreSQL</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/IonutSaft/job-application-tracker"
+                  class="proj-link"
+                  target="_blank"
+                >
+                  GitHub →
+                </a>
+                <a
+                  href="https://job-application-tracker-blond.vercel.app/"
+                  class="proj-link proj-link-ghost"
+                  target="_blank"
+                  >Live Demo →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-inner">
+        <div class="contact-wrap">
+          <div class="contact-info reveal">
+            <p class="section-label">// 04 — get in touch</p>
+            <h2 class="section-title">Let's work<br /><em>together</em></h2>
+            <div class="divider"></div>
+            <p>
+              I'm actively looking for my first professional role as a
+              Full-Stack Developer. If you find me suitable for an opportunity
+              on your team, please don't hesitate to reach out. I'm eager to
+              contribute, learn, and grow in a collaborative environment.
+            </p>
+            <div class="contact-links">
+              <a
+                href="mailto:ionut.saft14@gmail.com"
+                class="c-link"
+                target="_blank"
+              >
+                <span class="c-icon">✉</span> ionut.saft14@gmail.com
+              </a>
+              <a
+                href="https://github.com/IonutSaft"
+                class="c-link"
+                target="_blank"
+              >
+                <span class="c-icon">⌨</span> github.com/IonutSaft
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ionut-saftoiu-44a20b333/"
+                class="c-link"
+                target="_blank"
+              >
+                <span class="c-icon">in</span> linkedin.com/in/ionut-saftoiu
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label class="form-label">Your Name</label>
+              <input type="text" class="form-input" placeholder="Name" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input
+                type="email"
+                class="form-input"
+                placeholder="name@example.com"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea
+                class="form-textarea"
+                placeholder="Tell me about the opportunity..."
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn-primary"
+              style="border: none; cursor: pointer; font-size: 0.78rem"
+            >
+              Send Message →
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2024 <span>Ionut</span>. Built with care.</p>
+      <p>Designed & developed by <span>Ionut</span></p>
+    </footer>
+
+    <script>
+      // Custom cursor
+      const cursor = document.getElementById("cursor");
+      const ring = document.getElementById("ring");
+      let mouseX = 0,
+        mouseY = 0,
+        ringX = 0,
+        ringY = 0;
+
+      document.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        cursor.style.transform = `translate(${mouseX - 5}px, ${mouseY - 5}px)`;
+      });
+
+      function animateRing() {
+        ringX += (mouseX - ringX) * 0.12;
+        ringY += (mouseY - ringY) * 0.12;
+        ring.style.transform = `translate(${ringX - 18}px, ${ringY - 18}px)`;
+        requestAnimationFrame(animateRing);
+      }
+      animateRing();
+
+      document.querySelectorAll("a, button").forEach((el) => {
+        el.addEventListener("mouseenter", () => {
+          cursor.style.transform += " scale(2)";
+          ring.style.width = "60px";
+          ring.style.height = "60px";
+          ring.style.borderColor = "rgba(230,126,34,.6)";
+        });
+        el.addEventListener("mouseleave", () => {
+          ring.style.width = "36px";
+          ring.style.height = "36px";
+          ring.style.borderColor = "rgba(230,126,34,.4)";
+        });
+      });
+
+      // Scroll reveal
+      const reveals = document.querySelectorAll(".reveal");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => entry.target.classList.add("visible"), i * 80);
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      reveals.forEach((el) => observer.observe(el));
+
+      // Form submit
+      function handleSubmit(e) {
+        e.preventDefault();
+        const btn = e.target.querySelector("button");
+        btn.textContent = "Message Sent ✓";
+        btn.style.background = "var(--moss)";
+      }
+    </script>
+  </body>
+</html>
