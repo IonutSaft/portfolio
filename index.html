@@ -14,7 +14,6 @@
     <div class="cursor" id="cursor"></div>
     <div class="cursor-ring" id="ring"></div>
 
-    <!-- NAV -->
     <nav>
       <a class="nav-logo" href="#hero">Ionuț<span>.</span></a>
       <ul class="nav-links">
@@ -25,7 +24,6 @@
       </ul>
     </nav>
 
-    <!-- HERO -->
     <section id="hero">
       <div class="hero-bg-circle hbc1"></div>
       <div class="hero-bg-circle hbc2"></div>
@@ -63,7 +61,6 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
     <section id="about">
       <div class="section-inner">
         <div class="about-grid">
@@ -109,7 +106,6 @@
       </div>
     </section>
 
-    <!-- SKILLS -->
     <section id="skills">
       <div class="section-inner">
         <p class="section-label reveal">// 02 — skills & tools</p>
@@ -152,7 +148,6 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
     <section id="projects">
       <div class="section-inner">
         <p class="section-label reveal">// 03 — selected work</p>
@@ -160,7 +155,6 @@
         <div class="divider reveal"></div>
 
         <div class="projects-grid">
-          <!-- Project 1 -->
           <div class="project-card reveal">
             <div class="project-thumb">
               <div class="project-thumb-bg pt1">🛒</div>
@@ -200,7 +194,6 @@
             </div>
           </div>
 
-          <!-- Project 2 -->
           <div class="project-card reveal">
             <div class="project-thumb">
               <div class="project-thumb-bg pt2">📋</div>
@@ -240,7 +233,6 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact">
       <div class="section-inner">
         <div class="contact-wrap">
@@ -322,14 +314,12 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
       <p>© 2026 <span>Ionuț</span>. Built with care.</p>
       <p>Designed & developed by <span>Ionuț</span></p>
     </footer>
 
     <script>
-      // Custom cursor
       const cursor = document.getElementById("cursor");
       const ring = document.getElementById("ring");
       let mouseX = 0,
@@ -365,7 +355,6 @@
         });
       });
 
-      // Scroll reveal
       const reveals = document.querySelectorAll(".reveal");
       const observer = new IntersectionObserver(
         (entries) => {
@@ -393,12 +382,9 @@
         btn.disabled = true;
         btn.textContent = "Sending...";
 
-        // --- EMAIL SENDING LOGIC ---
-        // Replace the placeholder below with your email or service endpoint (e.g., Formspree, EmailJS).
         const RECIPIENT_EMAIL_OR_SERVICE_URL =
           "https://formspree.io/f/xqeywvpa";
 
-        // Example using fetch (common for services like Formspree):
         fetch(RECIPIENT_EMAIL_OR_SERVICE_URL, {
           method: "POST",
           headers: {
