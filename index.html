@@ -16,7 +16,7 @@
 
     <!-- NAV -->
     <nav>
-      <a class="nav-logo" href="#hero">Ionut<span>.</span></a>
+      <a class="nav-logo" href="#hero">Ionuț<span>.</span></a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -31,7 +31,7 @@
       <div class="hero-bg-circle hbc2"></div>
 
       <div class="hero-left">
-        <p class="hero-eyebrow">&#x2F;&#x2F; Available for hire</p>
+        <p class="hero-eyebrow">&#x2F;&#x2F; Open to work</p>
         <h1 class="hero-name">Hello, I'm<br /><em>Ionuț.</em></h1>
         <p class="hero-title">Aspiring Full-Stack Developer</p>
         <p class="hero-desc">
@@ -251,8 +251,7 @@
             <p>
               I'm actively looking for my first professional role as a
               Full-Stack Developer. If you find me suitable for an opportunity
-              on your team, please don't hesitate to reach out. I'm eager to
-              contribute, learn, and grow in a collaborative environment.
+              on your team, please don't hesitate to reach out.
             </p>
             <div class="contact-links">
               <a
@@ -282,21 +281,31 @@
           <form class="contact-form reveal" onsubmit="handleSubmit(event)">
             <div class="form-group">
               <label class="form-label">Your Name</label>
-              <input type="text" class="form-input" placeholder="Name" />
+              <input
+                type="text"
+                name="name"
+                class="form-input"
+                placeholder="Name"
+                required
+              />
             </div>
             <div class="form-group">
               <label class="form-label">Email Address</label>
               <input
                 type="email"
+                name="email"
                 class="form-input"
                 placeholder="name@example.com"
+                required
               />
             </div>
             <div class="form-group">
               <label class="form-label">Message</label>
               <textarea
+                name="message"
                 class="form-textarea"
                 placeholder="Tell me about the opportunity..."
+                required
               ></textarea>
             </div>
             <button
@@ -313,8 +322,8 @@
 
     <!-- FOOTER -->
     <footer>
-      <p>© 2024 <span>Ionut</span>. Built with care.</p>
-      <p>Designed & developed by <span>Ionut</span></p>
+      <p>© 2026 <span>Ionuț</span>. Built with care.</p>
+      <p>Designed & developed by <span>Ionuț</span></p>
     </footer>
 
     <script>
@@ -372,9 +381,48 @@
       // Form submit
       function handleSubmit(e) {
         e.preventDefault();
-        const btn = e.target.querySelector("button");
-        btn.textContent = "Message Sent ✓";
-        btn.style.background = "var(--moss)";
+        const form = e.target;
+        const formData = new FormData(form);
+        const name = formData.get("name");
+        const email = formData.get("email");
+        const message = formData.get("message");
+
+        const btn = form.querySelector("button");
+        btn.disabled = true;
+        btn.textContent = "Sending...";
+
+        // --- EMAIL SENDING LOGIC ---
+        // Replace the placeholder below with your email or service endpoint (e.g., Formspree, EmailJS).
+        const RECIPIENT_EMAIL_OR_SERVICE_URL =
+          "https://formspree.io/f/xqeywvpa";
+
+        // Example using fetch (common for services like Formspree):
+        fetch(RECIPIENT_EMAIL_OR_SERVICE_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            subject: `Contact from: ${name}`,
+            sender: email,
+            message: message,
+          }),
+        })
+          .then((response) => {
+            if (response.ok) {
+              btn.textContent = "Message Sent ✓";
+              btn.style.background = "var(--moss)";
+              form.reset();
+            } else {
+              throw new Error("Failed to send message");
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            btn.textContent = "Error! Try again.";
+            btn.disabled = false;
+          });
       }
     </script>
   </body>
