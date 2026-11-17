@@ -262,9 +262,3 @@ portfolio/
 **Postpone to v1.1+:** tag filtering on the case-study index / URL-synced filters, "load more" (only needed past ~12 projects), Romanian locale, blog, testimonials, contact form backend, project detail image galleries, RSS, view-transition animations, custom domain (one env var away).
 
 ---
-
-## 8. First three tasks you can start today
-
-1. **Prove the pipeline (45 min).** `create-next-app` in `/home/storage/projects/portfolio` with TS + Tailwind + App Router, replace the homepage with an `h1` reading "Xevon — Junior Web Developer", push to GitHub, import to Vercel, confirm the live URL.
-2. **Write `content/site.ts` with your real words (60–90 min).** Name, role, the value statement from the checklist formula, location, email, socials, two About paragraphs, skills groups, education entries. No placeholder text — placeholder identity copy is the hardest thing to remember to fix.
-3. **Inventory three projects (60 min).** Pick the three you'd defend in an interview. For each, capture one screenshot at 1200×750, note the live URL and repo (or decide honestly that one has no demo yet), and write the one-line summary. This is the input M1 needs — and if a project has no demo, that's a signal to build one before polishing the site.
