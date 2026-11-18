@@ -3,33 +3,32 @@
 import { useTheme } from "next-themes";
 
 /**
- * The icon is driven by the `dark` class on <html> (set before paint by
- * next-themes), so it is correct on first paint and needs no mount guard.
- * The click handler reads that class rather than `resolvedTheme`, which
- * next-themes leaves undefined until the first `setTheme` — using it would
- * make the first click in dark mode a no-op.
+ * Theme toggle.
+ *
+ * - The icon is driven by the `dark` class on <html>, which next-themes sets
+ *   before paint, so it is correct on first paint and needs no mount guard.
+ * - The click handler reads that same class instead of `resolvedTheme`:
+ *   next-themes leaves `resolvedTheme` undefined until the first `setTheme`,
+ *   and using it made the first click in dark mode a no-op.
+ * - The accessible name is state-independent on purpose. Any label derived
+ *   from the resolved theme differs between server and client HTML and
+ *   triggers a hydration mismatch; the icon already conveys current state.
  */
 export function ThemeToggle() {
-  const { resolvedTheme, setTheme } = useTheme();
-
-  const ready = resolvedTheme !== undefined;
-  const next = resolvedTheme === "dark" ? "light" : "dark";
+  const { setTheme } = useTheme();
 
   function toggle() {
-    const isDarkNow = document.documentElement.classList.contains("dark");
-    setTheme(isDarkNow ? "light" : "dark");
+    const isDark = document.documentElement.classList.contains("dark");
+    setTheme(isDark ? "light" : "dark");
   }
 
   return (
     <button
       type="button"
       onClick={toggle}
-      aria-label={ready ? `Switch to ${next} theme` : "Switch between light and dark theme"}
-      title={ready ? `Switch to ${next} theme` : undefined}
+      aria-label="Switch between light and dark theme"
       className="inline-flex size-10 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-surface hover:text-foreground"
     >
-      {/* Both icons ship in the HTML; CSS picks one from the <html> class, so
-          the correct icon is visible before hydration. */}
       <SunIcon className="size-5 dark:hidden" />
       <MoonIcon className="hidden size-5 dark:block" />
     </button>

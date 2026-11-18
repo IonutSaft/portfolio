@@ -1,8 +1,8 @@
 import { Container } from "@/components/layout/Container";
+import { ProjectGrid } from "@/components/projects/ProjectGrid";
 import { Button } from "@/components/ui/Button";
 import { Prose } from "@/components/ui/Prose";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Tag } from "@/components/ui/Tag";
 
 /**
  * Structure only — headings, anchors and primitives. Real copy and content
@@ -39,24 +39,14 @@ export default function Home() {
         aria-labelledby="work-title"
         className="scroll-mt-24 border-t border-border py-20"
       >
-        <Container className="flex flex-col gap-10">
+        <Container className="flex flex-col gap-8">
           <SectionHeading
             id="work-title"
             eyebrow="Work"
             title="Selected projects"
-            description="The project grid and tag filter are built in M3."
+            description="Each card opens a case study: what it is, the hard part, and what I'd do differently."
           />
-          <ul className="flex flex-wrap gap-2">
-            <li>
-              <Tag>React</Tag>
-            </li>
-            <li>
-              <Tag>TypeScript</Tag>
-            </li>
-            <li>
-              <Tag>Tailwind</Tag>
-            </li>
-          </ul>
+          <ProjectGrid />
         </Container>
       </section>
 
