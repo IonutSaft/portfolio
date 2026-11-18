@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Nav } from "@/components/layout/Nav";
 import { SkipLink } from "@/components/layout/SkipLink";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import { siteSettings } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,19 +25,17 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Xevon — Junior Web Developer",
-    template: "%s · Xevon",
+    default: siteSettings.seo.defaultTitle,
+    template: siteSettings.seo.titleTemplate,
   },
-  description:
-    "Portfolio of Xevon, a junior web developer: selected projects, case studies and how to get in touch.",
+  description: siteSettings.seo.description,
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: "/",
-    siteName: "Xevon",
-    title: "Xevon — Junior Web Developer",
-    description:
-      "Portfolio of Xevon, a junior web developer: selected projects, case studies and how to get in touch.",
+    siteName: siteSettings.name,
+    title: siteSettings.seo.defaultTitle,
+    description: siteSettings.seo.description,
   },
   robots: { index: true, follow: true },
 };

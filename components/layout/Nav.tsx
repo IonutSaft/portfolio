@@ -4,6 +4,7 @@ import { Container } from "@/components/layout/Container";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { navLinks } from "@/lib/nav";
+import { siteSettings } from "@/lib/site";
 
 export function Nav() {
   return (
@@ -13,8 +14,7 @@ export function Nav() {
           href="/"
           className="rounded-md text-base font-semibold tracking-tight text-foreground"
         >
-          {/* Wordmark — replaced by site.name once content/site.ts exists */}
-          Xevon
+          {siteSettings.name}
         </Link>
 
         <nav aria-label="Primary" className="hidden md:block">
